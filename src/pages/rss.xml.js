@@ -6,7 +6,7 @@ export async function GET(context) {
     description: 'Crafting the Digital Future with Web Development Wonders',
     site: context.site,
     items: await pagesGlobToRssItems(
-      import.meta.glob('./posts/*.{md,mdx}'),
+      import.meta.glob('./posts/**/*.{md,mdx}'),
     ),
     stylesheet: './rss/styles.xsl',
     customData: `<language>en-us</language>`,

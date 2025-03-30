@@ -11,9 +11,11 @@ const { title } = AppConfig;
 const { description } = AppConfig;
 
 const allPosts = Object.values(
-	import.meta.glob('./posts/*.md', { eager: true })
+	import.meta.glob('./**/*.md', { eager: true })
 ) as MarkdownInstance<any>[];
 allPosts.sort(sortPostsByDate);
+console.log('Posts found:', allPosts.length, allPosts.map(p => p.url)); // Log count and URLs/paths
+
 ---
 
 <Base head={{ title, description }}>

@@ -8,7 +8,7 @@ import { MarkdownInstance } from 'astro';
 
 export async function getStaticPaths(): Promise<any> {
 	const allPosts = Object.values(
-		import.meta.glob('../posts/*.md', { eager: true })
+		import.meta.glob('../posts/**/*.md', { eager: true })
 	) as MarkdownInstance<any>[];
 
 	const allTags: Set<string> = new Set(
