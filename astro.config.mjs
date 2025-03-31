@@ -31,7 +31,7 @@ const options = {
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://astro-tech-blog-ten.vercel.app/',
+	site: 'https://blog.samueledenicola.io/',
 
 	markdown: {
 		syntaxHighlight: false,
